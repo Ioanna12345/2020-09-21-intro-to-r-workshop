@@ -25,12 +25,13 @@
 # What does: 11 + 1 / 6  evaluate to ?
 
 # Solution:
-
+11+1/6
 
 # Calculate 10 plus 2 all divided by 3 and then squared
 
-# Solution:
 
+# Solution:
+((10 + 2)/3)^2
 
 
 
@@ -48,13 +49,20 @@ a + b               # we can add them together just like numbers
 # --------
 #
 # What happens if we change a and then re-add a and b? [Hint: Try it now]
-#
+a <- 7
+a + b
+
 # Does it work if you just change a in the script and then add a and b? [Hint: Try it]
-#
+a <- 8
+a+ b
 # Did you still get the same answer after you changed a? 
 # If so, why do you think that might be?
 #
 # We can also assign the result of a + b to a new variable, c. 
+
+c <- a + b
+
+
 # How would you do this?
 #
 # Solution:
@@ -65,7 +73,7 @@ a + b               # we can add them together just like numbers
 #
 # == != < > >= <= !
 1 < 124
-
+1 > 124
 #
 # Sensible object names are sensible ...
 #
@@ -83,24 +91,28 @@ ekljre2jklwef023ijlefj93jkl23rj90f32k <- 1
 # 
 #
 # Assign the name of this workshop to a object with a good name.
+
 #
 # Solution: [Hint:       <- "Introduction to R"]
 
+a <- 'Introduction to R'
+workshop_name <- 'Introduction to R'
+
 # Assign the name of video conferencing tool we are using to an object
-#
+ video_tool <- 'Zoom'
 # Solution: [Hint:      <- "Zoom"]
 
 
 # Which of these are valid object names: [Hint: Try them out]
 #
-#  min_height
-#  max.height
-#  _age
-#  .mass
-#  MaxLength
-#  min-length
-#  2widths
-#  celsius2kelvin
+ min_height <- 2
+ max.height <- 3
+ _age <- 9
+ .mass <- 10
+ MaxLength <- 8
+ min-length <- 11
+ 2widths <- 20
+ celsius2kelvin <- 2
 
 #
 # Topic: Displaying results
@@ -125,12 +137,12 @@ weight_kg
 # 
 # What are the values after each statement in the following?
 # 
-# mass <- 47.5            # mass is: 
-# age  <- 122             # age is:
-# mass <- mass * 2.0      # mass is:
-# age  <- age - 20        # age is:
-# mass_index <- mass/age  # mass_index is: 
-#
+# mass <- 47.5            # mass is: 47.5
+# age  <- 122             # age is: 122
+# mass <- mass * 2.0      # mass is: 95
+# age  <- age - 20        # age is: 102
+# mass_index <- mass/age  # mass_index is: 0.9313725
+
 # How do we do we know if our answers are correct ? 
 # [Hint: <highlight> [ALT][ENTER]
 
@@ -150,15 +162,16 @@ weight_kg
 #
 # Add explanatory comments to the following lines of code
 
-ft <- 3
-in <- ft * 12
-cms <- in * 2.54
-m = cms / 100
+ft <- 3             # lenght in feet
+in <- ft * 12       # conversion from feet to inches
+cms <- in * 2.54    # number of centimetres in a inch
+m = cms / 100       # convert from centimetres to metres
 
 #
 # Topic: Functions and Arguments
 #
-sqrt(2)
+a <- 16
+sqrt(2) 
 sqrt(a)
 abs(-23.3)
 round(3.14159)
@@ -170,11 +183,19 @@ args(round)
 
 round(3.14159, digits = 2)
 round(digits = 2, x = 3.14159)
+round (3.14159, 2)
+round (2.28, 3.14159)
+
 
 #
 # Exercise
 #
 # what does the function called log10() do ?  Can you test it ?
+
+log10 ("cat")
+log10 (10)
+log10 (100)
+?log10
 #
 # Answer:
 
