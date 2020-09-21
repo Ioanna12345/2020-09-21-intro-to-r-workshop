@@ -239,8 +239,8 @@ length_species
 # and there are other types as well ...
 sqrt_of_minus_one <- 1i
 true_or_false_value <- TRUE
-decimal_number = 54.0
-whole_number = -54L
+decimal_number <- 54.0
+whole_number <- -54L
 
 
 class(sqrt_of_minus_one)
@@ -262,13 +262,14 @@ class(decimal_number)
 #   thing <- c("some characters", 3.141, 100, TRUE)
 #   thing
 #   class(thing)
+
 #
 # What will happen in each of these examples?
 #
-#   num_char <- c(1, 2, 3, "a")
-#   num_logical <- c(1, 2, 3, TRUE)
-#   char_logical <- c("a", "b", "c", TRUE)
-#   tricky <- c(1, 2, 3, "4")
+  num_char <- c(1, 2, 3, "a")
+  num_logical <- c(1, 2, 3, TRUE)
+  char_logical <- c("a", "b", "c", TRUE)
+  tricky <- c(1, 2, 3, "4")
 #
 # [Hint: use class() to check the data type of your objects]
 #
@@ -312,17 +313,18 @@ animals[animals == "cat" | animals == "rat"] # returns both rat and cat
 
 animals %in% c("rat", "cat", "dog", "duck", "goat")
 animals[animals %in% c("rat", "cat", "dog", "duck", "goat")]
+animals[animals %in% c ("rat")]
 
 # Challenge
 #
 # Can you explain  why 
 #
-#  "four" > "five" 
+# "four" > "five" 
 #
 # returns TRUE?
 #
 # Answer:
-
+#because 'four' and 'five are characters and are compared alphabetically
 
 # Topic: Missing data (NA - Not Available)
 
@@ -332,7 +334,9 @@ max(heights)
 mean(heights, na.rm = TRUE)
 max(heights, na.rm = TRUE)
 
-heights[!is.na(heights)]
+is.na(heights)
+!is.na(heights)
+heights[!is.na(heights)] 
 na.omit(heights)
 heights[complete.cases(heights)]
 
@@ -343,12 +347,18 @@ heights[complete.cases(heights)]
 # Using this vector of heights in inches, create a new vector 
 # with the NAs removed.
 # 
-#   heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
-#
-# Solution
 
+heights <- c(63, 69, 60, 65, NA, 68, 61, 70, 61, 59, 64, 69, 63, 63, NA, 72, 65, 64, 70, 63, 65)
+
+ 
+
+# Solution
+na.omit(heights)
 # Use the function median() to calculate the median of the heights vector.
-#
+
+median(na.omit (heights))
+
+median (heights, na.rm=TRUE)
 # Solution
 
 # Use R to figure out how many people in the set are taller than 67 inches.
