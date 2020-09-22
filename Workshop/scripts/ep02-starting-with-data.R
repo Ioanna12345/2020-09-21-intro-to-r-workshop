@@ -183,23 +183,35 @@ as.numeric (as.character (year) )
 #
 
 # R has a whole library for dealing with dates ...
+library (lubridate)
 
+
+my_date <- ymd ("2015-01-01")
+class (my_date)
+
+#date: 7-6-1977
 
 
 # R can concatenated things together using paste()
-
+paste ("abc", "123", "xyz", sep = "-")
+my_date <- ymd (paste ("2015", "01", "26", sep = "-"))
+class (my_date)
 
 # 'sep' indicates the character to use to separate each component
 
 
-# paste() also works for entire columns
 
+# paste() also works for entire columns
+surveys["month"]
+surveys$year
+surveys$date <- ymd (paste (surveys$year, surveys$month, 
+            surveys$day, sep= "-"))
 
 # let's save the dates in a new column of our dataframe surveys$date 
 
 
 # and ask summary() to summarise 
-
+summary (surveys)
 
 # but what about the "Warning: 129 failed to parse"
 
