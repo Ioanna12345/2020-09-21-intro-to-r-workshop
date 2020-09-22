@@ -79,6 +79,7 @@ surveys [1,6]
 
 surveys[ ,6]
 
+
 # first column of the data frame (as a data frame)
 
 head (surveys[1])
